@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: monospace;
+}
+:root {
+    --primary-color : #595dae;
+    --sub-color : #000;
+}
+main {
+    display: flex;
+    justify-content: flex-end;
+}
+.search-area,
+.recipe-details {
+    position: fixed;
+    width: 40%;
+    background-color: var(--primary-color);
+    height: 100vh;
+    left : 0;
+
+    
+}
+.search-area h2 {
+    margin-bottom: 1em;
+    color: white;
+
+}
+
+.container {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 80%;
+}
+.content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.search-input { 
+    height: 50px;
+    border: 0;
+    padding: 5px;
+    outline: none;
+    color: var(--primary-color);
+    width: 90%;
+}
+.search-icon {
+    width: 2em;
+    height: 50px;
+    display: block;
+    color: white;
+    background-color: var(--sub-color);
+    font-size: 1.25em;
+    border: none;
+    cursor: pointer;
+}
+.results-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(40%,1fr));
+    width: 60%;
+    padding: 1em;
+    gap: 1em;
+    margin-top: 30px;
+}
+.results-area > div {
+    box-shadow: 0 4px 20px #ccc;
+    border-radius: 20px;
+    margin-bottom: 1em;
+}
+.results-area > div .card-image img {
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+   
+}
+.results-area > div .card-info {
+padding: 30px 0;
+text-align: center;
+}
+.results-area > div .card-info a {
+    display: inline-block;
+    width: 60%;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    padding: 15px 0;
+    font-size: 1.25em;
+    margin-top: 2em;
+}
+.results-area > div .card-info a:hover {
+    background-color: var(--sub-color);
+}
+.recipe-details {
+    padding: 5em 2em;
+    overflow-y: auto;
+}
+.recipe-details  i {
+    position: absolute;
+    right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.recipe-details > * {
+    margin-bottom: 1.5em;
+    color: white;
+}
+.recipe-details h2 {
+    font-size: 2.2em;
+}
+.recipe-details p {
+    font-size: 1.2em;
+}
+.remove-details {
+    display: none;
+}
